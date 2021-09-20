@@ -54,9 +54,10 @@ public class SimpleHashTable {
 
     public Employee remove(String key) {
         int find = findKey(key);
-        if (hashtable[find] == null) return null;
+        if (find == -1) return null;
         StoredEmployee sEmp = hashtable[find];
         hashtable[find] = null;
+        rehash(hashtable);
         return sEmp.getEmployee();
     }
 
@@ -98,6 +99,15 @@ public class SimpleHashTable {
             return hashedKey;
         } else {
             return -1;
+        }
+    }
+
+    private void rehash(StoredEmployee[] oldTable) {
+        hashtable = new StoredEmployee[oldTable.length];
+        for (int i=0; i < oldTable.length; i++) {
+            if (oldTable[i] != null) {
+                put(oldTable[i].key, oldTable[i].getEmployee());
+            }
         }
     }
 }

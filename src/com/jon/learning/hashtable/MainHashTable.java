@@ -35,5 +35,7 @@ public class MainHashTable {
                         : "not found"));
         System.out.println("Find Smith: " + ht.get("Smith"));
 //        System.out.println("Find Jones: " + ht.get("Jones"));
+
+        ht.printHashTable();
     }
 }
