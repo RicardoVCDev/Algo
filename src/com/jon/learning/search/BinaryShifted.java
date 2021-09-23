@@ -2,9 +2,16 @@ package com.jon.learning.search;
 
 public class BinaryShifted {
     public static void main(String[] args) {
-        int[] intArr = {4,5,6,7,1,2,3};
-        int ans = search(intArr, 6);
-        System.out.println(ans);
+//        int[] intArr = {4,5,6,7,1,2,3};
+        int[] intArr = {7,1,2,3,4,5,6};
+        System.out.println(search(intArr, 4));
+        System.out.println(search(intArr, 5));
+        System.out.println(search(intArr, 6));
+        System.out.println(search(intArr, 7));
+        System.out.println(search(intArr, 1));
+        System.out.println(search(intArr, 2));
+        System.out.println(search(intArr, 3));
+        System.out.println(search(intArr, 0));
     }
 
     public static int search(int[] input, int target) {
