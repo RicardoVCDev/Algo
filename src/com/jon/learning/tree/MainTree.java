@@ -26,5 +26,9 @@ public class MainTree {
 
         System.out.println("Minimum value is "+tree.min());
         System.out.println("Maximum value is "+tree.max());
+
+        tree.delete(88);
+        System.out.println("Maximum value is "+tree.max());
+
     }
 }

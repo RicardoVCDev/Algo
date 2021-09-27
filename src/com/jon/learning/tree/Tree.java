@@ -57,4 +57,25 @@ public class Tree {
 
         return Integer.MAX_VALUE;
     }
+
+    public void delete(int value) {
+        root = delete(root, value);
+    }
+
+    public TreeNode delete(TreeNode subtreeRoot, int value) {
+        if (subtreeRoot == null) return subtreeRoot;
+        if (value < subtreeRoot.getValue()) {
+            subtreeRoot.setLeftNode(delete(subtreeRoot.getLeftNode(), value));
+        } else if (value > subtreeRoot.getValue()) {
+            subtreeRoot.setRightNode(delete(subtreeRoot.getRightNode(), value));
+        } else {
+            if (subtreeRoot.getLeftNode() == null) {
+                return subtreeRoot.getRightNode();
+            } else {
+                return subtreeRoot.getLeftNode();
+            }
+        }
+
+        return subtreeRoot;
+    }
 }
