@@ -57,7 +57,7 @@ public class SingleNumberMyWay {
         }
         return nums[nums.length - 1];
     }
-    //best solution
+    //best solution - from web
     public int bestSolution(int[] nums) {
         int x = 0;
         for (int num : nums) {
