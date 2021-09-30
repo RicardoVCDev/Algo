@@ -48,7 +48,7 @@ public class SingleNumberMyWay {
         return running;
     }
 
-    //my better solution
+    //my better solution - actually this is ms slower
     public int myFasterSolution(int[] nums) {
         if (nums.length == 1) return nums[0];
         Arrays.sort(nums);
