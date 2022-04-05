@@ -1,7 +1,7 @@
 # Project exclude paths
 /bin/
 /.idea/
+/.out/
 /.classpath
 /.project
 /*.iml
-
