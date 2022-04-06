@@ -28,7 +28,7 @@ public class TwoSums {
         //do the same for the 2nd half
         //if execution finishes, the correct combination doesn't exists
 
-        Map<Integer, Integer> temp = new HashMap<>();
+        Map<Integer, Integer> temp = new HashMap<>(nums.length);
         int mid = nums.length / 2;
         int[] reply = new int[2];
         for (int i = 0; i < mid; i++) {
