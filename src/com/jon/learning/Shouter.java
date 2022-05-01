@@ -1,5 +1,9 @@
 package com.jon.learning;
 
+import com.jon.learning.udemy.Node;
+import com.jon.learning.udemy.linkedlist.Doubly;
+import com.jon.learning.udemy.linkedlist.Singly;
+
 public class Shouter {
     public static void shout(int[] arr) {
         StringBuffer sb = new StringBuffer("[");
@@ -18,6 +22,17 @@ public class Shouter {
         }
         sb.append(arr[arr.length-1]+"]");
 
+        System.out.println(sb.toString());
+    }
+
+    public static void shout(Doubly list) {
+        StringBuffer sb = new StringBuffer("[");
+        Node node = list.getHead();
+        while (node != null) {
+            sb.append(node.getValue()+",");
+            node = node.getNext();
+        }
+        sb.append("]");
         System.out.println(sb.toString());
     }
 }

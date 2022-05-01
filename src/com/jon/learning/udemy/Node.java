@@ -5,6 +5,12 @@ public class Node<T> {
     Node<T> next;
     Node<T> previous;
 
+    public Node() {super();}
+
+    public Node(T value) {
+        this.value = value;
+    }
+
     public T getValue() {
         return value;
     }

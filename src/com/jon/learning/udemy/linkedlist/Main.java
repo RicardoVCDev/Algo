@@ -1,5 +1,7 @@
 package com.jon.learning.udemy.linkedlist;
 
+import com.jon.learning.Shouter;
+
 public class Main {
     public static void main(String[] args) {
         Singly singly = new Singly();
@@ -24,5 +26,9 @@ public class Main {
         System.out.println("Size: "+singly.getSize() +
                 " -> ["+singly.getAllValues()+"]");
 
+        Doubly<String> doubly = new Doubly<>();
+        doubly.addFirst("Jon");
+        doubly.addFirst("Joan");
+        Shouter.shout(doubly);
     }
 }
