@@ -2,7 +2,6 @@ package com.jon.learning;
 
 import com.jon.learning.udemy.Node;
 import com.jon.learning.udemy.linkedlist.Doubly;
-import com.jon.learning.udemy.linkedlist.Singly;
 
 public class Shouter {
     public static void shout(int[] arr) {

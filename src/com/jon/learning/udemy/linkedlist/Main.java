@@ -29,6 +29,16 @@ public class Main {
         Doubly<String> doubly = new Doubly<>();
         doubly.addFirst("Jon");
         doubly.addFirst("Joan");
+        doubly.addFirst("Faith");
+        doubly.addFirst("Yuan");
+        doubly.add(2,"Azsy");
+        Shouter.shout(doubly);
+        System.out.println(doubly.get(2));
+        doubly.remove(0);
+        Shouter.shout(doubly);
+        doubly.remove(doubly.getSize() - 1);
+        Shouter.shout(doubly);
+        doubly.remove(1);
         Shouter.shout(doubly);
     }
 }
