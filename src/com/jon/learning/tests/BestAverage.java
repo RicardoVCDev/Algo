@@ -24,11 +24,13 @@ public class BestAverage {
         String[][] input = {
                 {"Bobby", "87"},
                 {"Charles", "100"},
-                {"Eric", "64"},
-                {"Charles", "22"}
+                {"Eric", "75"},
+                {"Charles", "22"},
+                {"123 Ltd.", "64"},
+                {"Bobby", "61"}
         };
 
-        int expected = 87;
+        int expected = 75;
         if (bestAverageGrade(input) != expected) {
             System.out.println("failed!");
         } else {
@@ -68,4 +70,15 @@ public class BestAverage {
         }
         return running / ownScore.size();
     }
+
+    String[][] input2 = {
+            {"ABC Company", "87"},
+            {"Softbank", "100"},
+            {"Prudent Investment Inc.", "43"},
+            {"Softbank", "-3"},
+            {"123 Ltd.", "46"},
+            {"ABC Company", "10"}
+    };
+
+    int expected2 = 49;
 }
