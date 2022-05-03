@@ -24,19 +24,20 @@ import java.util.Map;
 public class ShortestPath {
 
     public int[] solution(int[][] graph, int start, int end) {
-        Map<Integer, Integer> map = new HashMap<>(graph.length);
-
-        for (int i=0; i<graph.length; i++) {
-            for (int j=0; j<graph[i].length; i++) {
-                if (graph[i][j] != 0) {
-                    Integer shortest = map.get(graph[i]);
-                    if (shortest==null) {
-                        map.put(i, graph[i][j]);
-                    } else {
-                        map.put(i, Math.min(shortest, graph))
-                    }
-                }
-            }
-        }
+//        Map<Integer, Integer> map = new HashMap<>(graph.length);
+//
+//        for (int i=0; i<graph.length; i++) {
+//            for (int j=0; j<graph[i].length; i++) {
+//                if (graph[i][j] != 0) {
+//                    Integer shortest = map.get(graph[i]);
+//                    if (shortest==null) {
+//                        map.put(i, graph[i][j]);
+//                    } else {
+//                        map.put(i, Math.min(shortest, graph))
+//                    }
+//                }
+//            }
+//        }
+        return null;
     }
 }

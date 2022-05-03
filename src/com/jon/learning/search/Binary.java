@@ -1,5 +1,7 @@
 package com.jon.learning.search;
 
+import java.util.*;
+
 public class Binary {
     public static void main(String[] args) {
         int[] intArr = {1,2,3,4,5,6,7};

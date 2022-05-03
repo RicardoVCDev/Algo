@@ -20,7 +20,7 @@ package com.jon.learning.leet;
  */
 public class MaxProfit {
     public static void main(String[] args) {
-        int[] prices = {3,3};
+        int[] prices = {7,1,5,3,6,4};
         System.out.println(maxProfit(prices));
     }
 
