@@ -36,7 +36,7 @@ public class BinaryTreeNode<T extends Comparable> {
     }
 
     public void insert(T value) {
-        if (value.compareTo(this.value) > 0) {
+        if (Objects.equals(value, this.value) > 0) {
             if (this.right == null) {
                 this.right = new BinaryTreeNode<>(value);
             } else {
