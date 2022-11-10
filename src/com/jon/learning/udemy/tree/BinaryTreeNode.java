@@ -1,5 +1,7 @@
 package com.jon.learning.udemy.tree;
 
+import java.util.Objects;
+
 public class BinaryTreeNode<T extends Comparable> {
     private T value;
     private BinaryTreeNode<T> right;
@@ -36,7 +38,7 @@ public class BinaryTreeNode<T extends Comparable> {
     }
 
     public void insert(T value) {
-        if (Objects.equals(value, this.value) > 0) {
+        if (Objects.equals(value, this.value)) {
             if (this.right == null) {
                 this.right = new BinaryTreeNode<>(value);
             } else {
