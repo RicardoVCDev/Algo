@@ -5,5 +5,7 @@ public class MainTrie {
         Trie trie = new Trie();
         trie.add("win");
         trie.add("winner");
+        System.out.println("losser exists: "+trie.exists("losser"));
+        System.out.println("winn exists: "+trie.exists("winn"));
     }
 }

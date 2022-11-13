@@ -7,14 +7,15 @@ public class TrieNode {
     private Map<Character, TrieNode> letters;
     private boolean endOfWord;
 
-    public TrieNode() {
+    public TrieNode(boolean endOfWord) {
         this.letters = new HashMap<>();
-        this.endOfWord = false;
+        this.endOfWord = endOfWord;
     }
 
     public TrieNode(String characters) {
-        this();
+        this(false);
         this.insert(characters);
+        this.endOfWord = false;
     }
 
     public Map<Character, TrieNode> getLetters() {
@@ -42,13 +43,11 @@ public class TrieNode {
      * @param chars
      */
     public void insert(String chars) {
-        //win, in, n
-        //winner, inner, nner, ner, er, r
         if (chars.length() < 1) return;
         char c = chars.substring(0, 1).toCharArray()[0];
         TrieNode child;
         if (chars.length() == 1) { //last character
-            child = new TrieNode(); //end of node
+            child = new TrieNode(true); //end of node
             this.letters.put(c, child);
         } else {
             child = this.letters.get(c);
@@ -58,5 +57,24 @@ public class TrieNode {
                 child.insert(chars.substring(1));
             }
         }
+    }
+
+    /**
+     * If input is empty, return false
+     * Set c as the 1st character of the input
+     * Retrieve the node from letters map that corresponds to character c
+     *  If null or endOfWord is true, return false
+     *  Else pass the remaining characters except the 1st one to the "exists()"
+     *          function of the node retrieved from letters map, and return the result.
+     * @param chars array of char to be searched.
+     * @return
+     */
+    public boolean exists(String chars) {
+        if (chars.length() < 1) return true;
+        char c = chars.substring(0, 1).toCharArray()[0];
+        TrieNode trie = letters.get(c);
+        if (trie == null || this.endOfWord == true) return false;
+
+        return trie.exists(chars.substring(1));
     }
 }

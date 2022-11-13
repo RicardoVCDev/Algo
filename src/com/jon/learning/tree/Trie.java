@@ -1,7 +1,7 @@
 package com.jon.learning.tree;
 
 public class Trie {
-    private TrieNode rootNode = new TrieNode();
+    private TrieNode rootNode = new TrieNode(false);
 
     public Trie() {}
 
@@ -12,5 +12,9 @@ public class Trie {
      */
     public void add(String word) {
         rootNode.insert(word);
+    }
+
+    public boolean exists(String chars) {
+        return rootNode.exists(chars);
     }
 }
